@@ -14,7 +14,7 @@ services:
     depends_on:
       - node_exporter
   demo-app:
-    image:	prom/prometheus-dummy-exporter:latest
+    image:	prom/prometheus-demo-service:latest
     container_name:	demo_app
     ports:
       - "8000:8080"
