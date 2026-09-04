@@ -20,4 +20,4 @@ services:
     image:	julius/prometheus-demo-service:latest
     container_name:	demo_app
     ports:
-      - "8000:8000"
+      - "8080:8080"
