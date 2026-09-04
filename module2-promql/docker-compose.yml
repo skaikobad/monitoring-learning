@@ -11,6 +11,9 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml # The source file on your host machine:The destination path inside the container where the file will be placed
     ports:
       - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--web.enable-lifecycle'  # This enables the Prometheus API to reload the configuration file at runtime
     depends_on:
       - node_exporter
   demo-app:
